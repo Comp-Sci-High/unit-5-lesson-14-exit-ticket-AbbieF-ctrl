@@ -31,7 +31,7 @@ const potionSchema = new mongoose.Schema({
 const Potion = mongoose.model("Potion", potionSchema, "Potions")
 
 // In script.js (NOT THIS FILE), write a function that creates a new potion by calling this route
-app.post("/create-potion", function(){
+app.post("/create-potion", async function(){
   const newPotion = new Potion({
     label: req.body.label,
     effect: req.body.effect,
